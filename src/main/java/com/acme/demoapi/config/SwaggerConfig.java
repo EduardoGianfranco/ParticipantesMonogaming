@@ -24,7 +24,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-            .title("My aPi API")
+            .title("My DAMN API")
             .description("this APIclation is designed for tEsTiNg propousal")
             .build();
     }
