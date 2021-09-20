@@ -11,6 +11,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
+@Table(name = "t_detalle_factura")
 public class DetalleFactura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
