@@ -26,6 +26,6 @@ public class Factura {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date fechaFactura;
     private BigDecimal totalFactura;
-    @OneToMany(fetch = FetchType.LAZY)
+    @Transient
     private List<DetalleFactura> detalleFacturas;  //Realizar conexión con DetalleFactura
 }
