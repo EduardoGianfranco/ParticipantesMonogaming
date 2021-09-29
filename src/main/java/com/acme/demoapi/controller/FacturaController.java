@@ -24,8 +24,9 @@ public class FacturaController {
     public ResponseEntity <Integer> create(@RequestBody Factura f){    //Lo que esta en paréntesis es el contrato (Hasta ahí le esta pasando la factura) | Metodo crea el número de la factura?
         facturaData.save(f);        //Graba en la tabla
         facturaData.flush();        //Crea el id
+        Factura generada = f;       //Error solucionaddo y explicado en video semana 3 en 2:10:00
         List<DetalleFactura> listItems = f.getDetalleFacturas();    //Sacar los detalles de la factura de la trama (CCNA?)
-        listItems.stream().forEach(o -> o.setFactura(f));   //esos detalles se pasan a una lista, para actualizar elobjeto capturado por el método create
+        listItems.stream().forEach(o -> o.setFactura(generada));   //esos detalles se pasan a una lista, para actualizar elobjeto capturado por el método create
         detalleFacturaData.saveAllAndFlush(listItems);  //save y flush de los items de la factura
 
         return new ResponseEntity<Integer>(f.getId(), HttpStatus.CREATED);  //Y devuelve el id
