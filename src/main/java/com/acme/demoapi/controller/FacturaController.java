@@ -1,6 +1,7 @@
 package com.acme.demoapi.controller;
 
 import java.util.List;
+import java.util.*;
 
 import com.acme.demoapi.model.*;
 import com.acme.demoapi.repository.*;
@@ -32,4 +33,17 @@ public class FacturaController {
         return new ResponseEntity<Integer>(f.getId(), HttpStatus.CREATED);  //Y devuelve el id
     }
 
+    @GetMapping(value = "/{numeroFactura}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Factura> findByNumber(@PathVariable String numeroFactura){
+        
+        Optional<Factura> optFactura = facturaData.findByNumero(numeroFactura);
+        if(optFactura.isPresent()){ //Si la factura esta presente en el Optional...
+            Factura factura = optFactura.get(); //Se obtiene la factura
+            List<DetalleFactura> detalleFacturas = detalleFacturaData.findItemsByFactura(factura); //Se obtienen los detalle (items)s de la factura
+            factura.setDetalleFacturas(detalleFacturas);
+            return new ResponseEntity<Factura>(factura, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<Factura>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
