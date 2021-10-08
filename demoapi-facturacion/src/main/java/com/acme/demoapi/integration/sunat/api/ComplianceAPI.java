@@ -15,6 +15,8 @@ public class ComplianceAPI {
 
     private static final String URL_API_SUNAT="http://localhost:8081/api/sunat/";
 
+    //NOTA DE ERROR: Cuando el error no esté marcado en rojo, es posible que se encuentre entre "" [Ejem: "//localhoost"]
+
     private RestTemplate restTemplate;  //RestTemplate son plantillas para conectar por medio de http a un servicio Rest
 
     public ComplianceAPI(RestTemplate restTemplate){
