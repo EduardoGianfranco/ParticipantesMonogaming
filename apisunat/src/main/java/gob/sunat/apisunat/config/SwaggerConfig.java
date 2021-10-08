@@ -24,7 +24,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-            .title("My DAMN API")
+            .title("SUSnat API")
             .description("APIs del Goviernon SUSnat")
             .build();
     }
