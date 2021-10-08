@@ -14,7 +14,7 @@ public class FacturaController {
 
     private final FacturaRepository facturaData;
     private final DetalleFacturaRepository detalleFacturaData;
-    private final ComplianceAPI complianceApi;  //?? Innecesario? El profesor cambió de logica a ultimo momento y creo que esto queda obsoleto (Al igual que su inicialización en el método constructor)
+    private final ComplianceAPI complianceApi;  
 
     public FacturaController(FacturaRepository factData, DetalleFacturaRepository detalleFactData, ComplianceAPI complianceApi){   //En este método está llamando al repositorio
         this.facturaData = factData;             //lo puse con nombres distintos para entender de donde son las variables
