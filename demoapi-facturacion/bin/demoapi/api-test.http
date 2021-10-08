@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/participante/ HTTP/1.0
+
+
+//IMPORTANTE DEJAR ESPACIO ENTRE EL Content-Type y el { o saldrá error!!
+POST http://localhost:8080/api/participante/ HTTP/1.0
+Content-Type: application/json
+
+{
+        "name": "name3",
+        "address": "direccion3",
+        "email": "email@email.com3",
+        "phoneNumber": "9999999993",
+        "birthDate": "2021-08-27T09:36:44.289+00:00"
+}

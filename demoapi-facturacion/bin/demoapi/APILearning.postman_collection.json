@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "ebf146ba-12ec-425d-8b94-304fab62d3ca",
+		"name": "APILearning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Participantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/participante/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"participante",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Participante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
