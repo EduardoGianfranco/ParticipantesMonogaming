@@ -13,7 +13,7 @@ import com.acme.demoapi.model.Factura;
 @Service
 public class ComplianceAPI {
 
-    private static final String URL_API_SUNAT="http://localhoost:8081/api/sunat/";
+    private static final String URL_API_SUNAT="http://localhost:8081/api/sunat/";
 
     private RestTemplate restTemplate;  //RestTemplate son plantillas para conectar por medio de http a un servicio Rest
 
