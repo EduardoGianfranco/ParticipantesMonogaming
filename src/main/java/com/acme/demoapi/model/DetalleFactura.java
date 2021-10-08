@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -20,6 +22,7 @@ public class DetalleFactura {
     private int cantidad;
     private BigDecimal precio;
     private String producto;
+    @JsonIgnore     //Para solucionar error de redundancia al mostrar los detalles de la factura (Se hacía un bucle infinito)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "factura_id")
     private Factura factura;
