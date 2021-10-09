@@ -22,10 +22,12 @@ public class RabbitConfig {     //Aquí se realiza la configuración para la col
         return new Queue(QUEUE_NAME, true);
     }
 
+    @Bean
     public Exchange fanoutExchange(){   //En caso caiga aqui, se envia un fanout para mensajes alternativos?
         return new FanoutExchange(EXCHANGE_NAME, true, false);
     }
 
+    @Bean
     public Binding queueBinding(){  //Aquí se hace el enlace Exchange con Cola [El camino (Exchange) enlaza a la cola (Queue)]
         return new Binding(QUEUE_NAME, Binding.DestinationType.QUEUE, EXCHANGE_NAME, "", null);
     }
