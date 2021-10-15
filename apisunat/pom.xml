@@ -46,6 +46,13 @@
 			<version>3.0.0</version>
 		</dependency>
 			<!-- ________________________________-->
+		
+			<!--amqp para integración asíncrona-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+			<!-- ________________________________-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
