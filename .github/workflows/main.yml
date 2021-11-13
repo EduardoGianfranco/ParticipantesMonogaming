@@ -33,7 +33,7 @@ jobs:
 
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
 
-        dockerfile_directory: ./demoapi
+        dockerfile_directory: ./apisunat    #Lo habia dejado en demoapi u.u
 
         dockerfile_name: DockerFile
 
